@@ -34,16 +34,16 @@ public class Application {
 
     public static void main(String[] args) {
         
-        exercice1();
+        exo1();
         
-        exercice2();
+        exo2();
         
-        exercice3();
+        exo3();
 
        
     }
 
-    public static void exercice1() {
+    public static void exo1() {
         List<Etudiant> data = getData();
 
         String text = data.stream()
@@ -52,7 +52,7 @@ public class Application {
         System.out.println(text);
     }
 
-    public static void exercice2(){
+    public static void exo2(){
         List<Etudiant> data = getData();
 
         System.out.println(
@@ -63,7 +63,7 @@ public class Application {
                         .findFirst().get());
     }
 
-    public static  void exercice3(){
+    public static  void exo3(){
         List<Etudiant> data = getData();
 
         List<Evaluation> listNote = data.stream()
