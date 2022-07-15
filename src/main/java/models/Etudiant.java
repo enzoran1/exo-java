@@ -11,8 +11,8 @@ public class Etudiant extends Personne {
     }
 
     public Etudiant rendreAnonyme() {
-        prenom = "anonymous";
-        nom = "anonymous";
+        prenom = "any";
+        nom = "any";
         return this;
     }
 

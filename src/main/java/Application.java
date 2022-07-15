@@ -33,14 +33,14 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        System.out.println("Exercice 1 :");
+        
         exercice1();
-        System.out.println("Exercice 2 :");
+        
         exercice2();
-        System.out.println("Exercice 3 :");
+        
         exercice3();
-        System.out.println("Exercice 4 :");
-        exercice4();
+
+       
     }
 
     public static void exercice1() {
@@ -75,21 +75,7 @@ public class Application {
         listNote.forEach(note -> System.out.println(note.getPersonne().getPrenom() + " " + note.getNote()));
     }
 
-    public static  void exercice4(){
-        List<Etudiant> data = getData();
-
-        System.out.println(
-                data.stream()
-                        .sorted(Comparator.comparing(personne -> personne.getListeNote().stream()
-                                .mapToInt(note -> note.getNote()).average().getAsDouble()))
-                        .map(personne ->
-                                personne.getNom().toUpperCase().charAt(0) + "." +
-                                        personne.getPrenom().toUpperCase().charAt(0) + " (" +
-                                        personne.getListeNote().stream()
-                                                .mapToInt(note -> note.getNote()).max().getAsInt() + ")"
-                        )
-                        .collect(Collectors.joining(" > ")));
-    }
+  
 
 
 }
